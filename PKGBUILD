@@ -1,7 +1,7 @@
 # Maintainer: callmetango
 
 pkgname=sonic-login-manager
-pkgver=6.6.5.3
+pkgver=6.6.5.4
 pkgrel=1
 arch=(x86_64)
 pkgdesc='Sonic Login Manager'
@@ -36,7 +36,7 @@ makedepends=(extra-cmake-modules
              qt6-tools)
 groups=(sonicde)
 source=("$pkgname-$pkgver.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('e88db02268f5e4a0f2221f269f0e4491b18affbabd75c58d9a04390a35f701d4')
+sha256sums=('df96b2b4874fa3dc5166458da2277f3503940e2b4271a20970e1dfed375decce')
 
 build() {
   cmake -B build -S $pkgname-$pkgver \
