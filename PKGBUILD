@@ -2,7 +2,7 @@
 
 pkgname=sonic-login-manager
 pkgver=6.6.5.4
-pkgrel=1
+pkgrel=2
 arch=(x86_64)
 pkgdesc='Sonic Login Manager'
 url='https://github.com/Sonic-DE/sonic-login-manager'
@@ -48,5 +48,8 @@ build() {
 
 package() {
   DESTDIR="$pkgdir" cmake --install build
-  rm -rf "$pkgdir"/etc
+  rm -rf "$pkgdir"/etc/dinit.d
+  rm -rf "$pkgdir"/etc/init.d
+  rm -rf "$pkgdir"/etc/runit
+  rm -rf "$pkgdir"/etc/s6
 }
